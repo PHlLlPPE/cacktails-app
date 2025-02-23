@@ -2,18 +2,16 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CocktailController;
+use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\VoteController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+// Routes API RESTful pour Cocktails et Ingrédients 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::apiResource('cocktails', CocktailController::class);
+Route::apiResource('ingredients', IngredientController::class);
+
+// Routes pour les Votes
+
+Route::post('votes', [VoteController::class, 'store']);
+Route::get('votes', [VoteController::class, 'index']);

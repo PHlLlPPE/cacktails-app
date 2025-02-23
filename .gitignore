@@ -1,0 +1,8 @@
+# Ignorer le dossier `vendor` de Laravel
+backend/vendor/
+
+# Ignorer le dossier ǹode_modules` de Vue.js
+frontend/node_modules/
+
+# Ignorer les fichiers de configuration sensibles 
+.env

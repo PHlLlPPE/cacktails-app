@@ -1,5 +1,7 @@
+<script setup>
+import CreateCocktail from '@/components/CreateCocktail.vue';
+</script>
+
 <template>
-  <div class="bg-blue-500 text-white p-6 text-center">
-    🎉 Tailwind CSS est bien installé et fonctionne ! 🚀
-  </div>
+  <CreateCocktail />
 </template>

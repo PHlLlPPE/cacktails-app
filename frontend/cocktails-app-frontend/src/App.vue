@@ -3,5 +3,5 @@ import CreateCocktail from '@/components/CreateCocktail.vue';
 </script>
 
 <template>
-  <CreateCocktail />
+  <router-view />
 </template>
